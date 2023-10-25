@@ -17,3 +17,10 @@
 .icon img {
    color: #fff;
 }
+
+.imgbg {
+   background-image: url("../img/disc.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: auto;
+}

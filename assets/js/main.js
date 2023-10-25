@@ -71,4 +71,54 @@ document.addEventListener('DOMContentLoaded', function ()
       delay: 5000,
     },
   });
+     
+
+    const buttonClose = document.querySelectorAll('[data-dismiss="modal"]')
+    const modal = document.querySelector('.modal');
+    const trigger = document.querySelector('[data-toggle="modal"]');
+
+    // Show modal on window load
+    window.addEventListener('load', () => {
+      showModal(modal);
+    });
+
+    // Function to show the modal
+    function showModal(modal) {
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        modal.classList.add('show');
+      }, 100);
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      document.body.classList.add('astroui-modal-open');
+    }
+
+    // Function to dismiss the modal
+    function dismissModal(modal) {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 200);
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      document.body.classList.remove('astroui-modal-open');
+    }
+
+    const getDismiss = (buttonClose, modal) => {
+        buttonClose.addEventListener('click', () => {
+        dismissModal(modal)
+        })
+    }
+    
+    buttonClose.forEach((buttonClose) => {
+        getDismiss(buttonClose, modal)
+    })
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal.classList.contains('show')) {
+        dismissModal(modal);
+      }
+    });
+
 });
