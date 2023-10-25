@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function ()
     grabCursor: true,
     spaceBetween: 10,
     loop: true,
+    parallax: true,
     pagination:
     {
       el: ".swiper-pagination",
