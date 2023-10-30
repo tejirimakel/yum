@@ -163,4 +163,48 @@ document.addEventListener('DOMContentLoaded', function ()
         
     });
 
+
+
+        let counts1 = setInterval(counter1);
+        let c1 = 0;
+
+        function counter1() {
+            let count1 = document.getElementById("counter1");
+            
+
+            count1.innerHTML = ++c1 + '+';
+
+            if (c1 === 100) {
+                clearInterval(counts1);
+            }
+        }
+
+        let counts2 = setInterval(counter2);
+        let c2 = 99999990;
+
+        function counter2() {
+            
+            let count2 = document.getElementById("counter2");
+            
+            count2.innerHTML = ++c2 + '+';
+
+            if (c2 === 100000000) {
+                clearInterval(counts2);
+            }
+
+        }
+
+        let counts3 = setInterval(counter3);
+        let c3 = 0;
+
+        function counter3() {
+
+            let count3 = document.getElementById("counter3");
+            count3.innerHTML = ++c3 + '+';
+
+            if (c3 === 16) {
+                clearInterval(counts3);
+            }
+        }
+
 });
