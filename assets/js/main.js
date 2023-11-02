@@ -1,18 +1,24 @@
 document.addEventListener('DOMContentLoaded', function ()
 {
-  const menuButton = document.getElementById('menu-btn');
-  const closeButton = document.getElementById('close-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenu = document.getElementById("mobile-menu");
+            const menuBtn = document.getElementById("menu-btn");
+            const closeBtn = document.getElementById("close-btn");
+            const menuIcon = menuBtn.querySelector('svg');
+const closeIcon = closeBtn.querySelector('svg');
 
-  menuButton.addEventListener('click', function ()
-  {
-    mobileMenu.classList.toggle('hidden');
-  });
+            menuBtn.addEventListener("click", function() {
+                mobileMenu.classList.toggle("hidden");
+                menuIcon.style.display = 'none';
+  closeIcon.style.display = 'block';
+            });
 
-  closeButton.addEventListener('click', function ()
-  {
-    mobileMenu.classList.toggle('hidden');
-  });
+            closeBtn.addEventListener("click", function() {
+                mobileMenu.classList.toggle("hidden");
+                closeIcon.style.display = 'none';
+  menuIcon.style.display = 'block';
+            });
+
+    
 
 
   // Accordion
@@ -165,46 +171,83 @@ document.addEventListener('DOMContentLoaded', function ()
 
 
 
-        let counts1 = setInterval(counter1);
-        let c1 = 0;
-
-        function counter1() {
-            let count1 = document.getElementById("counter1");
-            
-
-            count1.innerHTML = ++c1 + '+';
-
-            if (c1 === 100) {
-                clearInterval(counts1);
-            }
+        function startCounter(id, startValue, endValue) {
+      let count = startValue;
+      const element = document.getElementById(id);
+      const interval = setInterval(() => {
+        element.textContent = count + '+';
+        if (count === endValue) {
+          clearInterval(interval);
         }
+        count++;
+      }, 100);
+    }
 
-        let counts2 = setInterval(counter2);
-        let c2 = 99999990;
+    const counterSection = document.getElementById('stats');
+    const counter1 = document.getElementById('counter1');
+    const counter2 = document.getElementById('counter2');
+    const counter3 = document.getElementById('counter3');
+    
+    let countersStarted = false;
 
-        function counter2() {
-            
-            let count2 = document.getElementById("counter2");
-            
-            count2.innerHTML = ++c2 + '+';
+    function checkCounterSection() {
+      const rect = counterSection.getBoundingClientRect();
+      const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
 
-            if (c2 === 100000000) {
-                clearInterval(counts2);
-            }
+      if (isVisible && !countersStarted) {
+        startCounter('counter1', 76, 100);
+        startCounter('counter2', 99999980, 100000000);
+        startCounter('counter3', 0, 16);
+        countersStarted = true;
+      }
+    }
 
-        }
+    window.addEventListener('scroll', checkCounterSection);
+    window.addEventListener('resize', checkCounterSection);
 
-        let counts3 = setInterval(counter3);
-        let c3 = 0;
 
-        function counter3() {
+    checkCounterSection();
 
-            let count3 = document.getElementById("counter3");
-            count3.innerHTML = ++c3 + '+';
+        // Get the button
+    const mybutton = document.getElementById("btn-back-to-top");
 
-            if (c3 === 16) {
-                clearInterval(counts3);
-            }
-        }
+    // When the user scrolls down 20px from the top of the document, show the button
+
+    const scrollFunction1 = () => {
+      if (
+        document.body.scrollTop > 1600 ||
+        document.documentElement.scrollTop > 1600
+      ) {
+        mybutton.classList.remove("hidden");
+      } else {
+        mybutton.classList.add("hidden");
+      }
+    };
+    const backToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    window.addEventListener("scroll", scrollFunction1);
+
+        // Get the button
+    const gbbtn = document.getElementById("gbbtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+
+    const scrollFunction2 = () => {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        gbbtn.classList.remove("hidden");
+      } else {
+        gbbtn.classList.add("hidden");
+      }
+    };
+
+    window.addEventListener("scroll", scrollFunction2);
 
 });
