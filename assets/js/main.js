@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function ()
             const menuBtn = document.getElementById("menu-btn");
             const closeBtn = document.getElementById("close-btn");
             const menuIcon = menuBtn.querySelector('svg');
-const closeIcon = closeBtn.querySelector('svg');
+            const closeIcon = closeBtn.querySelector('svg');
 
             menuBtn.addEventListener("click", function() {
                 mobileMenu.classList.toggle("hidden");
@@ -40,21 +40,6 @@ const closeIcon = closeBtn.querySelector('svg');
       icons.forEach(icon =>
       {
         icon.classList.toggle('hidden');
-      });
-
-      accordionButtons.forEach((otherButton, otherIndex) =>
-      {
-        if (otherIndex !== index)
-        {
-          otherButton.classList.remove('active');
-          const otherDescription = otherButton.nextElementSibling;
-          otherDescription.classList.add('hidden');
-          const otherIcons = otherButton.querySelectorAll('span svg');
-          otherIcons.forEach(otherIcon =>
-          {
-            otherIcon.classList.add('invisible');
-          });
-        }
       });
     });
   });
@@ -195,8 +180,8 @@ const closeIcon = closeBtn.querySelector('svg');
       const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
 
       if (isVisible && !countersStarted) {
-        startCounter('counter1', 76, 100);
-        startCounter('counter2', 99999980, 100000000);
+        startCounter('counter1', 0, 100);
+        startCounter('counter2', 90000000, 100000000);
         startCounter('counter3', 0, 16);
         countersStarted = true;
       }
@@ -208,10 +193,21 @@ const closeIcon = closeBtn.querySelector('svg');
 
     checkCounterSection();
 
-        // Get the button
-    const mybutton = document.getElementById("btn-back-to-top");
 
-    // When the user scrolls down 20px from the top of the document, show the button
+    let num = setInterval(updated);
+        let upto = 0;
+        function updated() {
+            let count = document.getElementById("start-number");
+            count.innerHTML = ++upto + "+";
+            if (upto === 10000) {
+                clearInterval(num);
+            }
+        }
+
+
+
+
+    const mybutton = document.getElementById("btn-back-to-top");
 
     const scrollFunction1 = () => {
       if (
