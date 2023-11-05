@@ -1,5 +1,47 @@
 document.addEventListener('DOMContentLoaded', function ()
 {
+
+
+    const mybutton = document.getElementById("btn-back-to-top");
+
+    const scrollFunction1 = () => {
+      if (
+        document.body.scrollTop > 1600 ||
+        document.documentElement.scrollTop > 1600
+      ) {
+        mybutton.classList.remove("hidden");
+      } else {
+        mybutton.classList.add("hidden");
+      }
+    };
+    const backToTop = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    window.addEventListener("scroll", scrollFunction1);
+
+        // Get the button
+    const gbbtn = document.getElementById("gbbtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+
+    const scrollFunction2 = () => {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        gbbtn.classList.remove("hidden");
+      } else {
+        gbbtn.classList.add("hidden");
+      }
+    };
+
+    window.addEventListener("scroll", scrollFunction2);
+
+    
     const mobileMenu = document.getElementById("mobile-menu");
             const menuBtn = document.getElementById("menu-btn");
             const closeBtn = document.getElementById("close-btn");
@@ -64,53 +106,30 @@ document.addEventListener('DOMContentLoaded', function ()
   });
      
 
-    const buttonClose = document.querySelectorAll('[data-dismiss="modal"]')
-    const modal = document.querySelector('.modal');
-    const trigger = document.querySelector('[data-toggle="modal"]');
+     
 
-    // Show modal on window load
-    window.addEventListener('load', () => {
-      showModal(modal);
+    function showModal() {
+        $('#modal-example').fadeIn();
+    }
+
+    // Delay showing the modal by 5 seconds
+    $(document).ready(function () {
+        setTimeout(showModal, 5000); // 5000 milliseconds (5 seconds)
     });
 
-    // Function to show the modal
-    function showModal(modal) {
-      modal.style.display = 'flex';
-      setTimeout(() => {
-        modal.classList.add('show');
-      }, 100);
-      modal.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      document.body.classList.add('astroui-modal-open');
+    // Function to hide the modal with a fade-out effect
+    function hideModal() {
+        $('#modal-example').fadeOut();
     }
 
-    // Function to dismiss the modal
-    function dismissModal(modal) {
-      modal.classList.remove('show');
-      setTimeout(() => {
-        modal.style.display = 'none';
-      }, 200);
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      document.body.classList.remove('astroui-modal-open');
-    }
+    $('#modal-example button[data-dismiss="modal"]').on('click', hideModal);
 
-    const getDismiss = (buttonClose, modal) => {
-        buttonClose.addEventListener('click', () => {
-        dismissModal(modal)
-        })
-    }
-    
-    buttonClose.forEach((buttonClose) => {
-        getDismiss(buttonClose, modal)
-    })
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && modal.classList.contains('show')) {
-        dismissModal(modal);
-      }
-    });
+    $(document).on('keydown', function (e) {
+        if (e.keyCode === 27) { // Check if the key code is 27 (Esc key)
+            hideModal();
+        }
+    });    
 
 
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
@@ -156,94 +175,110 @@ document.addEventListener('DOMContentLoaded', function ()
 
 
 
-        function startCounter(id, startValue, endValue) {
-      let count = startValue;
-      const element = document.getElementById(id);
-      const interval = setInterval(() => {
-        element.textContent = count + '+';
-        if (count === endValue) {
-          clearInterval(interval);
-        }
-        count++;
-      }, 100);
+        function startCounter(id, startValue, endValue, speed) {
+  let count = startValue;
+  const element = document.getElementById(id);
+  const interval = setInterval(() => {
+    element.textContent = count + '+';
+    if (count === endValue) {
+      clearInterval(interval);
     }
+    count++;
+  }, speed);
+}
 
-    const counterSection = document.getElementById('stats');
-    const counter1 = document.getElementById('counter1');
-    const counter2 = document.getElementById('counter2');
-    const counter3 = document.getElementById('counter3');
+const counterSection = document.getElementById('stats');
+const counter1 = document.getElementById('counter1');
+const counter2 = document.getElementById('counter2');
+const counter3 = document.getElementById('counter3');
+
+let countersStarted = false;
+
+function checkCounterSection() {
+  const rect = counterSection.getBoundingClientRect();
+  const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+
+  if (isVisible && !countersStarted) {
+    startCounter('counter1', 0, 100, 50); // Speed in milliseconds (e.g., 100ms for faster counting).
+    startCounter('counter2', 97999999, 100000000, 5);
+    startCounter('counter3', 0, 16, 200);
+    countersStarted = true;
+  }
+}
+
+window.addEventListener('scroll', checkCounterSection);
+window.addEventListener('resize', checkCounterSection);
+
+checkCounterSection();
+
+
+
+    let num; // Declare the interval variable.
+let upto = 0;
+let speed = 5; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
+
+function updated() {
+    let count = document.getElementById("start-number");
+    count.innerHTML = ++upto + "+";
     
-    let countersStarted = false;
-
-    function checkCounterSection() {
-      const rect = counterSection.getBoundingClientRect();
-      const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
-
-      if (isVisible && !countersStarted) {
-        startCounter('counter1', 0, 100);
-        startCounter('counter2', 90000000, 100000000);
-        startCounter('counter3', 0, 16);
-        countersStarted = true;
-      }
+    if (upto === 100000) {
+        clearInterval(num);
     }
+}
 
-    window.addEventListener('scroll', checkCounterSection);
-    window.addEventListener('resize', checkCounterSection);
+function setSpeed(newSpeed) {
+    speed = newSpeed;
+    
+    // If the interval is already running, clear it and start a new one with the updated speed.
+    if (num) {
+        clearInterval(num);
+        num = setInterval(updated, speed);
+    }
+}
 
+// Start the interval with the initial speed.
+num = setInterval(updated, speed);
 
-    checkCounterSection();
+  
+const section = document.getElementById("resources");
+  const bx1 = document.getElementById("bx1");
+  const bx2 = document.getElementById("bx2");
+  const bx3 = document.getElementById("bx3");
 
+  // Add an event listener to the window for scroll events
+  window.addEventListener("scroll", function() {
+    // Get the position of the section and the scroll position
+    const sectionTop = section.offsetTop;
+    const scrollPosition = window.scrollY;
 
-    let num = setInterval(updated);
-        let upto = 0;
-        function updated() {
-            let count = document.getElementById("start-number");
-            count.innerHTML = ++upto + "+";
-            if (upto === 10000) {
-                clearInterval(num);
-            }
-        }
+    // Define an offset (adjust this value as needed)
+    const offset = 800;
 
+    // Check if the user has scrolled to the section
+    if (scrollPosition > sectionTop - offset) {
+      // Add the animation classes to the target elements
+      bx1.classList.add("animate__animated", "animate__slideInUp", "animate__delay-2s");
+      bx2.classList.add("animate__animated", "animate__slideInUp", "animate__delay-3s");
+      bx3.classList.add("animate__animated", "animate__slideInUp", "animate__delay-4s");
+    }
+  });
 
+   const faqSection = document.getElementById("faq");
 
+  // Add an event listener to the window for scroll events
+  window.addEventListener("scroll", function() {
+    // Get the position of the faq section and the scroll position
+    const faqSectionTop = faqSection.offsetTop;
+    const scrollPosition = window.scrollY;
 
-    const mybutton = document.getElementById("btn-back-to-top");
+    // Define an offset (adjust this value as needed)
+    const offset = 800;
 
-    const scrollFunction1 = () => {
-      if (
-        document.body.scrollTop > 1600 ||
-        document.documentElement.scrollTop > 1600
-      ) {
-        mybutton.classList.remove("hidden");
-      } else {
-        mybutton.classList.add("hidden");
-      }
-    };
-    const backToTop = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-
-    // When the user clicks on the button, scroll to the top of the document
-    mybutton.addEventListener("click", backToTop);
-
-    window.addEventListener("scroll", scrollFunction1);
-
-        // Get the button
-    const gbbtn = document.getElementById("gbbtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-
-    const scrollFunction2 = () => {
-      if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-      ) {
-        gbbtn.classList.remove("hidden");
-      } else {
-        gbbtn.classList.add("hidden");
-      }
-    };
-
-    window.addEventListener("scroll", scrollFunction2);
+    // Check if the user has scrolled to the faq section
+    if (scrollPosition > faqSectionTop - offset) {
+      // Add the animation class to the faq section
+      faqSection.classList.add("animate__animated", "animate__slideInUp", "animate__slow");
+    }
+  });
 
 });
