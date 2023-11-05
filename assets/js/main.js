@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
             menuBtn.addEventListener("click", function() {
                 mobileMenu.classList.toggle("hidden");
+                mobileMenu.classList.add("animate__animated", "animate__fadeIn");
                 menuIcon.style.display = 'none';
   closeIcon.style.display = 'block';
             });
