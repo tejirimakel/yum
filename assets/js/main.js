@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
             menuBtn.addEventListener("click", function() {
                 mobileMenu.classList.toggle("hidden");
-                mobileMenu.classList.add("animate__animated", "animate__fadeIn");
+                mobileMenu.classList.add("animate__animated", "animate__fadeInDown", "animate__slow");
                 menuIcon.style.display = 'none';
   closeIcon.style.display = 'block';
             });
@@ -174,6 +174,29 @@ document.addEventListener('DOMContentLoaded', function ()
         
     });
 
+    let num; // Declare the interval variable.
+let upto = 0;
+let speed = 5; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
+
+function updated() {
+    let count = document.getElementById("start-number");
+    count.innerHTML = ++upto + "+";
+    
+    if (upto === 100000) {
+        clearInterval(num);
+    }
+}
+
+function setSpeed(newSpeed) {
+    speed = newSpeed;
+    
+    // If the interval is already running, clear it and start a new one with the updated speed.
+    if (num) {
+        clearInterval(num);
+        num = setInterval(updated, speed);
+    }
+}
+
 
 
         function startCounter(id, startValue, endValue, speed) {
@@ -213,29 +236,6 @@ window.addEventListener('resize', checkCounterSection);
 checkCounterSection();
 
 
-
-    let num; // Declare the interval variable.
-let upto = 0;
-let speed = 5; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
-
-function updated() {
-    let count = document.getElementById("start-number");
-    count.innerHTML = ++upto + "+";
-    
-    if (upto === 100000) {
-        clearInterval(num);
-    }
-}
-
-function setSpeed(newSpeed) {
-    speed = newSpeed;
-    
-    // If the interval is already running, clear it and start a new one with the updated speed.
-    if (num) {
-        clearInterval(num);
-        num = setInterval(updated, speed);
-    }
-}
 
 // Start the interval with the initial speed.
 num = setInterval(updated, speed);

@@ -89,10 +89,10 @@
           Grow your Brand
           </a>
       </nav>
-      <div id="mobile-menu" class="hidden z-50" role="dialog" aria-modal="true">
+      <div id="mobile-menu" class="hidden z-50 transition duration-700 ease-in-out" role="dialog" aria-modal="true">
           <!-- Background backdrop, show/hide based on slide-over state. -->
             <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10 text-center">
+              <div class="-my-6 divide-y divide-gray-500/10 text-center transition duration-700 ease-in-out">
                 <div class="space-y-2 py-6">
                   <a href="index.html#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">About</a>
                   <a href="index.html#resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Resources</a>
@@ -420,8 +420,8 @@
           <div role="dialog"
             id="modal-example"
             aria-hidden="true"
-            style="display: flex;"
-            class="modal fixed top-0 left-0 z-50 w-screen h-screen bg-black/30 flex items-center flex-col justify-center fade"
+            style="display: none"
+            class="modal fixed top-0 left-0 z-50 w-screen h-screen bg-black/30 flex items-center flex-col justify-center"
             tabindex="-1"
             data-toggle="modal">
           <div
@@ -465,7 +465,7 @@
               For a Limited Time 
             </p>
             <p class="mt-6 text-[14px] leading-6 font-semibold uppercase">
-             Get FREE access to our <span>($1600+)</span> business community, including over 50+ video courses, frameworks, and support from eight-figure mentors to achieve <span id="start-number">0</span> organic reach monthly in just 90 days.
+             Get FREE access to our <span>($1600+)</span> business community, including over 50+ video courses, frameworks, and support from eight-figure mentors to achieve <span id="start-number"></span> organic reach monthly in just 90 days.
             </p>
             <a
               class="mt-8 inline-block rounded-[5rem] w-full bg-blue-600 hover:bg-blue-700 py-4 text-sm font-semibold uppercase tracking-widest text-white"
@@ -479,7 +479,7 @@
           </div>
        </section>
     <script src="assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </body>
