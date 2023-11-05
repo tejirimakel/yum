@@ -182,7 +182,7 @@ function updated() {
     let count = document.getElementById("start-number");
     count.innerHTML = ++upto + "+";
     
-    if (upto === 100000) {
+    if (upto === 10000000) {
         clearInterval(num);
     }
 }
