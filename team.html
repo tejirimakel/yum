@@ -1,485 +1,468 @@
 <!doctype html>
 <html class="bg-white scroll-smooth">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="We curate products and help you move your projects from start to finish, Consult with us!" name="description">
-    <meta name="keywords" content="branding, digital-marketing, brand-marketing, digital, conversion, yum, grow">
-    <title>YUM Worldwide</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/favicon.png" rel="apple-touch-icon">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <link rel="author" href="humans.txt">
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script>
-      tailwind.config = {
-          darkMode: 'class',
-          theme: {
-            extend: {
-                colors: {
-                  dark: '#0f172a',
-                  primary: '#8abeff',
-                  sec: '#0017d2',
-                  lblue: '#55a1ff',
-                  dblue: '#000a5c',
-                }
-          }
-      }
-      }     
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-      .content-auto {
-      content-visibility: auto;
-      }
-      }
-    </style>
-  </head>
-  <body class="overflow-x-hidden">
-    <section id="navi" class="bg-white dark:bg-gray-800">
-      <nav class="container p-6 lg:px-[4rem] xl:px-[7rem] mx-auto lg:flex lg:justify-between lg:items-center">
-        <div class="flex items-center justify-between">
-          <a href="/">
-            <img class="w-14 h-14" src="assets/img/logo.png" alt="logo"/>
-          </a>
-
-          <!-- Mobile menu button -->
-          <div class="flex lg:hidden">
-            <button id="menu-btn" type="button"
-              class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
-              aria-label="toggle menu">
-              <span class="sr-only">Open main menu</span>
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path fill-rule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                </path>
-              </svg>
-            </button>
-            <button id="close-btn" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
-              <span class="sr-only">Close menu</span>
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="hidden lg:flex flex-col mt-4 space-y-2 lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0 ">
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#faq">About</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#resources">Resources</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="team.html">Team</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#port">Portfolio</a>
-        </div>
-        <div class="lg:-ml-[6rem] text-center lg:my-auto -mt-[2.5rem]">
-            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm rounded-2xl">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button></div>
-          <a class="hidden lg:flex block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
-            href="#">
-          Grow your Brand
-          </a>
-      </nav>
-      <div id="mobile-menu" class="hidden z-50 transition duration-700 ease-in-out" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10 text-center transition duration-700 ease-in-out">
-                <div class="space-y-2 py-6">
-                  <a href="index.html#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">About</a>
-                  <a href="index.html#resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Resources</a>
-                  <a href="team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Team</a>
-                  <a href="index.html#port" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Portfolio</a>
-                </div>
-                <div class="py-2 px-10">
-                  <a class="block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 tracking-wide capitalize transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
-                    href="#">
-                  Grow your Brand
-                  </a>
-                </div>
-              </div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta content="We curate products and help you move your projects from start to finish, Consult with us!" name="description">
+      <meta name="keywords" content="branding, digital-marketing, brand-marketing, digital, conversion, yum, grow">
+      <title>YUM Worldwide</title>
+      <link rel="stylesheet" href="assets/css/style.css">
+      <!-- Favicons -->
+      <link href="assets/img/favicon.png" rel="icon">
+      <link href="assets/img/favicon.png" rel="apple-touch-icon">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+      <link rel="author" href="humans.txt">
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+      <script>
+         tailwind.config = {
+             darkMode: 'class',
+             theme: {
+               extend: {
+                   colors: {
+                     dark: '#0f172a',
+                     primary: '#8abeff',
+                     sec: '#0017d2',
+                     lblue: '#55a1ff',
+                     dblue: '#000a5c',
+                   }
+             }
+         }
+         }     
+      </script>
+      <style type="text/tailwindcss">
+         @layer utilities {
+         .content-auto {
+         content-visibility: auto;
+         }
+         }
+      </style>
+   </head>
+   <body class="overflow-x-hidden">
+      <section id="navi" class="bg-white dark:bg-gray-800">
+         <nav class="container p-6 lg:px-[3rem] 2xl:px-[10rem] mx-auto lg:flex lg:justify-between lg:items-center">
+            <div class="flex items-center justify-between">
+               <a href="/">
+               <img class="w-14 h-14" src="assets/img/logo.png" alt="logo"/>
+               </a>
+               <!-- Mobile menu button -->
+               <div class="flex lg:hidden">
+                  <button id="menu-btn" type="button"
+                     class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                     aria-label="toggle menu">
+                     <span class="sr-only">Open main menu</span>
+                     <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                        <path fill-rule="evenodd"
+                           d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                        </path>
+                     </svg>
+                  </button>
+                  <button id="close-btn" type="button" class=" text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                     <span class="sr-only">Close menu</span>
+                     <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                  </button>
+               </div>
             </div>
-      </div>
-    </section>
-    <section id="team" class="bg-white dark:bg-gray-800">
-      <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Meet Our <span class="text-blue-600">Y.U.M Team</span></h1>
-
-        <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-            We ensure the very best as a team to provide you with business solution.
-        </p>
-
-        <div class="grid grid-cols-1 gap-8 mt-8 mb-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/m.png" alt="Michael Sebastion">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Michael Sebastion</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Founder</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Michael and I’m the founder. Everyone has a story worth sharing. I aim to create a movement to amplify underrepresented voices, inspire change, and empower people to dare to be great by sharing their unique stories.</p>
+            <div class="hidden lg:flex flex-col mt-4 space-y-2 lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0 justify-center items-center space-x-4">
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#faq">About</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#resources">Resources</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="team.html">Team</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#port">Portfolio</a>
             </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/t.jpg" alt="Thomas Grinberg">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Thomas Grinberg</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Director of Operations</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Thomas and I'm the Director of Operations at Y.U.M Media. My job is to fine-tune our processes and help the company grow. I enjoy figuring out roadmaps for the future, improving how we work, and seeing my team do well.</p>
+            <div class="lg:-ml-[9.5rem] 2xl:-ml-[12rem] text-center lg:my-auto -mt-[2.5rem]">
+               <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm rounded-2xl">
+                  <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                  </svg>
+                  <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                  </svg>
+               </button>
             </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/ruth.jpg" alt="Ruth Otori">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Ruth Otori</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Digital Content Creator</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hi, I'm Ruth, the Digital Content Creator at Y.U.M Media. I blend creativity with strategy to craft digital stories that captivate and engage, helping brands shine across all online platforms.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/l.png" alt="Laura Guerra">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Laura Guerra</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Social Media Management</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Laura, I do Social Media Management at Y.U.M Media. I have been working with the Y.U.M Media team for a year now and built a career honing my craft in delivering the best social media strategy and engagement for our clients.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/n.png" alt="Nikita Kartsev">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Nikita Kartsev</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Front-End Web Developer</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Nikita, a Front-End Web Developer at Y.U.M Media. I specialize in creating intuitive and dynamic user experiences, ensuring that every interaction on our clients' websites is both visually engaging and seamlessly functional.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/leo.png" alt="Leo Toueg">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Leo Toueg</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Visual Director</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, My name is Leo, I'm a visual director on the Y.U.M team. I have been working with the Y.U.M Media team for numerous years now and built a career honing my craft in delivering the best service to our clients in a visually appealing way.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/mark.png" alt="">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Mark Maylan</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Graphic Designer</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Mark, a graphic designer with seven years of experience in the industry. My passion for design began when I was young, and I've spent my career honing my craft and developing a unique style that combines creativity, functionality, and innovation. I have been working with the Y.U.M Media team for a little over 2 years now, and I can't wait to keep pushing my limits.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/r.jpg" alt="">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Robert Zuhone</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">UGC Creator</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Robert, a UGC (User-Generated Content) Creator with Y.U.M Media. I bring authenticity to brands by crafting relatable and genuine content that resonates with communities and sparks conversations.</p>
-            </div>
-
-            <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
-                <div class="flex flex-col sm:-mx-4 sm:flex-row">
-                    <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/naram.png" alt="">
-
-                    <div class="mt-4 sm:mx-4 sm:mt-0">
-                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Naram Alhasani</h1>
-
-                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Copywriter</p>
-                    </div>
-                </div>
-
-                <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Naram, the Copywriter at Y.U.M Media. I weave words to capture attention, drive engagement, and convey brand stories with clarity and creativity.</p>
-            </div>
-        </div>
-      </div>
-    </section>
-    <section id="cta2" class="bg-blue-950 dark:bg-blue-950">
-      <div class="container lg:px-24 px-8 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
-        <div class="lg:text-left text-center">
-          <h2 class="text-2xl font-bold tracking-tight text-white xl:text-3xl dark:text-white pb-3">
-            Quit Wasting Your Time
-          </h2>
-          <p class="text-sm text-gray-400 dark:text-gray-400 break-words">with hashtags, post times, your bio, and other meaningless methods</p>
-        </div>
-        <div class="mt-8 lg:mt-0">
-          <div class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
-            <button class="px-6 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-2xl focus:ring focus:ring-blue-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-blue-700 focus:outline-none focus:bg-blue-500">
-            Grow Your Brand
-            </button>
-          </div>
-          <p class="mt-3 text-xs text-gray-400 dark:text-gray-400 text-center">FREE Technical Audit<br>(only 3 spots per month)</p>
-        </div>
-      </div>
-    </section>
-    <section id="footer" class="bg-dark dark:bg-dark">
-      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div class="md:flex md:justify-around items-center">
-          <div class="mb-6 md:mb-0 mr-32">
-            <a href="/" class="flex items-center">
-            <img src="assets/img/logo.png" class="mr-80 h-14" alt="Logo" />
+            <a class="hidden lg:flex block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
+               href="#">
+            Grow your Brand
             </a>
-            <p class="text-gray-400 dark:text-gray-400 pt-2 pb-4 font-medium">
-              Washington, DC 20053<br>United States
+         </nav>
+         <div id="mobile-menu" class="hidden z-50 transform-translate-x-full" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="mt-6">
+               <div class="-my-6 divide-y divide-gray-500/10 text-center">
+                  <div class="space-y-2 py-6">
+                     <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">About</a>
+                     <a href="#resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Resources</a>
+                     <a href="team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Team</a>
+                     <a href="#port" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Portfolio</a>
+                  </div>
+                  <div class="py-2 px-10">
+                     <a class="block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 tracking-wide capitalize transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto" href="#">
+                     Grow your Brand
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="team" class="bg-white dark:bg-gray-800">
+         <div class="container px-6 py-10 2xl:px-32 2xl:py-16 mx-auto">
+            <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Meet Our <span class="text-blue-600">Y.U.M Team</span></h1>
+            <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+               We ensure the very best as a team to provide you with business solution.
             </p>
-            <a href="tel:+15713535154" class="text-gray-500 dark:text-gray-400 pb-3 flex">
-              <?xml version="1.0" ?>
-              <svg class="feather feather-phone-call mr-3 w-6 h-6" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              (571)-353-5154
-            </a>
-            <a href="mailto:media@yumworldwide.com" class="text-gray-500 dark:text-gray-400 pb-3 flex icon">
-              <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-              <svg enable-background="new 0 0 26 26" id="Слой_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="h-6 w-6 mr-3" fill="currentColor">
-                <path d="M23.2294922,4H2.7705078C1.7939453,4,1,4.84375,1,5.8808594v14.2382813  C1,21.15625,1.7939453,22,2.7705078,22h20.4589844C24.2060547,22,25,21.15625,25,20.1191406V5.8808594  C25,4.84375,24.2060547,4,23.2294922,4z M15.666687,13.0003052L23.5,7.3469849v11.3060913L15.666687,13.0003052z M23.2294922,5.5  c0.0535278,0,0.1077881,0.0323486,0.1549072,0.0806885L13,13.0751343L2.6156006,5.5806885  C2.6627197,5.5323486,2.71698,5.5,2.7705078,5.5H23.2294922z M2.5,18.6530151V7.3469849l7.8328247,5.6529541L2.5,18.6530151z   M2.7705078,20.5c-0.0535278,0-0.1077881-0.0324707-0.1549072-0.0807495l8.9987183-6.4944458l0.9472046,0.6835938  c0.0224609,0.0162964,0.0484619,0.0229492,0.0721436,0.036377c0.0231323,0.0131226,0.0447388,0.024231,0.0689697,0.03479  C12.798584,14.7214966,12.8981323,14.75,12.9990234,14.75c0.0003662,0,0.0006104-0.0002441,0.0009766-0.0002441  S13.0006104,14.75,13.0009766,14.75c0.1008911,0,0.2004395-0.0285034,0.2963867-0.0704346  c0.024231-0.0105591,0.0458374-0.0216675,0.0689697-0.03479c0.0236816-0.0134277,0.0496826-0.0200806,0.0721436-0.036377  l0.9467163-0.6832886l8.9992065,6.4942017C23.3372803,20.4675903,23.28302,20.5,23.2294922,20.5H2.7705078z"/>
-              </svg>
-              media@yumworldwide.com
-            </a>
-          </div>
-          <div class="grid grid-cols gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Useful Links</h2>
-              <ul class="text-gray-400 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="/" class="hover:text-blue-400">Home</a>
-                </li>
-                <li class="mb-4">
-                  <a href="index.html#faq" class="hover:text-blue-400">About Us</a>
-                </li>
-                <li class="mb-4">
-                  <a href="index.html#resources" class="hover:text-blue-400">Resources</a>
-                </li>
-              </ul>
+            <div class="grid grid-cols-1 gap-8 mt-8 mb-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2">
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/m.png" alt="Michael Sebastion">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Michael Sebastion</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Founder</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Michael and I’m the founder. Everyone has a story worth sharing. I aim to create a movement to amplify underrepresented voices, inspire change, and empower people to dare to be great by sharing their unique stories.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/t.jpg" alt="Thomas Grinberg">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Thomas Grinberg</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Director of Operations</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Thomas and I'm the Director of Operations at Y.U.M Media. My job is to fine-tune our processes and help the company grow. I enjoy figuring out roadmaps for the future, improving how we work, and seeing my team do well.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/ruth.jpg" alt="Ruth Otori">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Ruth Otori</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Digital Content Creator</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hi, I'm Ruth, the Digital Content Creator at Y.U.M Media. I blend creativity with strategy to craft digital stories that captivate and engage, helping brands shine across all online platforms.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/l.png" alt="Laura Guerra">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Laura Guerra</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Social Media Management</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, my name is Laura, I do Social Media Management at Y.U.M Media. I have been working with the Y.U.M Media team for a year now and built a career honing my craft in delivering the best social media strategy and engagement for our clients.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/n.png" alt="Nikita Kartsev">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Nikita Kartsev</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Front-End Web Developer</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Nikita, a Front-End Web Developer at Y.U.M Media. I specialize in creating intuitive and dynamic user experiences, ensuring that every interaction on our clients' websites is both visually engaging and seamlessly functional.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/leo.png" alt="Leo Toueg">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Leo Toueg</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Visual Director</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, My name is Leo, I'm a visual director on the Y.U.M team. I have been working with the Y.U.M Media team for numerous years now and built a career honing my craft in delivering the best service to our clients in a visually appealing way.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/mark.png" alt="">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Mark Maylan</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Graphic Designer</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Mark, a graphic designer with seven years of experience in the industry. My passion for design began when I was young, and I've spent my career honing my craft and developing a unique style that combines creativity, functionality, and innovation. I have been working with the Y.U.M Media team for a little over 2 years now, and I can't wait to keep pushing my limits.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/r.jpg" alt="">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Robert Zuhone</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">UGC Creator</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Robert, a UGC (User-Generated Content) Creator with Y.U.M Media. I bring authenticity to brands by crafting relatable and genuine content that resonates with communities and sparks conversations.</p>
+               </div>
+               <div class="px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-primary dark:border-gray-700 dark:hover:border-transparent">
+                  <div class="flex flex-col sm:-mx-4 sm:flex-row">
+                     <img class="flex-shrink-0 object-cover w-24 h-24 rounded-full sm:mx-4 ring-4 ring-gray-300" src="assets/img/naram.png" alt="">
+                     <div class="mt-4 sm:mx-4 sm:mt-0">
+                        <h1 class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white">Naram Alhasani</h1>
+                        <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Copywriter</p>
+                     </div>
+                  </div>
+                  <p class="mt-4 text-gray-500 capitalize dark:text-gray-300 group-hover:text-white">Hello, I'm Naram, the Copywriter at Y.U.M Media. I weave words to capture attention, drive engagement, and convey brand stories with clarity and creativity.</p>
+               </div>
             </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
-              <ul class="text-gray-400 dark:text-gray-400 font-medium">
-                <li class="mb-4">
-                  <a href="privacy.html" class="hover:text-blue-400">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="tos.html" class="hover:text-blue-400">Terms of Service</a>
-                </li>
-              </ul>
+         </div>
+      </section>
+      <section id="cta2" class="bg-blue-950 dark:bg-blue-950">
+         <div class="container lg:px-20 2xl:px-40  px-8 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
+            <div class="lg:text-left text-center">
+               <h2 class="text-2xl font-bold tracking-tight text-white xl:text-3xl dark:text-white pb-3">
+                  Quit Wasting Your Time
+               </h2>
+               <p class="text-sm text-gray-400 dark:text-gray-400 break-words">with hashtags, post times, your bio, and other meaningless methods</p>
             </div>
-            <div>
-              <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Follow Us</h2>
-              <div class="text-gray-400 dark:text-gray-400 font-medium">
-                <p>Get an exclusive free peek into our network and how we've built it.</p>
-                <div class="flex mt-4 space-x-5 sm: sm:mt-0 pt-5">
-                  <a href="https://www.instagram.com/y.u.m/" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
-                    <?xml version="1.0" encoding="utf-8"?>
-                    <svg class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                      viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve" fill="currentColor" aria-hidden="true">
-                      <g>
-                        <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
-                          c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
-                        <circle cx="41.5" cy="16.4" r="2.9"/>
-                        <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
-                          h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
-                          s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
-                          c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
-                      </g>
-                    </svg>
-                    <span class="sr-only">Instagram</span>
-                  </a>
-                  <a href="https://www.tiktok.com/@youngunderratedmasses" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
-                    <?xml version="1.0" ?>
-                    <svg class="w-6 h-6" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
-                      <g id="Tiktok">
-                        <path class="cls-1" d="M27.8,7.12A1,1,0,0,0,26.86,7,3.49,3.49,0,0,1,22,3.72,1,1,0,0,0,21.72,3,1,1,0,0,0,21,2.69H17a1,1,0,0,0-1,1V20.81a2.5,2.5,0,1,1-2.5-2.5,1,1,0,0,0,1-1v-4a1,1,0,0,0-1-1A8.51,8.51,0,0,0,5,20.81a8.41,8.41,0,0,0,1.6,5,1,1,0,0,0,.81.42A1,1,0,0,0,8,26a1,1,0,0,0,.23-1.4A6.44,6.44,0,0,1,7,20.81a6.52,6.52,0,0,1,5.5-6.43v2A4.5,4.5,0,1,0,18,20.81V4.69h2.07A5.51,5.51,0,0,0,25.5,9.31a6.3,6.3,0,0,0,.75-.05V11.2a7.12,7.12,0,0,1-4.74-.83,1,1,0,0,0-1,0,1,1,0,0,0-.5.87v9.57a6.51,6.51,0,0,1-9,6,1,1,0,0,0-.77,1.84,8.36,8.36,0,0,0,3.28.66A8.52,8.52,0,0,0,22,21.47a.76.76,0,0,0,0-.16V12.79a9.13,9.13,0,0,0,5.52.16,1,1,0,0,0,.72-1V8A1,1,0,0,0,27.8,7.12Z"/>
-                      </g>
-                    </svg>
-                    <span class="sr-only">Tiktok</span>
-                  </a>
-                  <a href="https://www.youtube.com/@youngunderratedmasses" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
-                    <?xml version="1.0" ?>
-                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="w-6 h-6">
-                      <title/>
-                      <g data-name="youtube youtuber video play" id="youtube_youtuber_video_play">
-                        <path d="M30,12a5.71,5.71,0,0,0-5.31-5.7C18.92,6,13.06,6,7.33,6.28,4.51,6.28,2,9,2,12a43.69,43.69,0,0,0,0,8.72,5.32,5.32,0,0,0,5.28,5.33h0q4.35.24,8.72.24t8.67-.23A5.34,5.34,0,0,0,30,20.8,31.67,31.67,0,0,0,30,12Zm-2,8.63a.49.49,0,0,0,0,.12,3.36,3.36,0,0,1-3.39,3.34,166,166,0,0,1-17.28,0A3.36,3.36,0,0,1,4,20.65a42,42,0,0,1,0-8.47.45.45,0,0,0,0-.11A3.78,3.78,0,0,1,7.38,8.28c2.86-.13,5.74-.19,8.62-.19s5.76.06,8.62.19h.05c1.71,0,3.33,1.84,3.33,3.79a.76.76,0,0,0,0,.15A30.11,30.11,0,0,1,28,20.61Z"/>
-                        <path d="M20.79,15.51l-7.14-3.68a1,1,0,1,0-.92,1.78l5.43,2.79-4,2.07V16.4a1,1,0,0,0-2,0v3.72a1,1,0,0,0,1,1,1,1,0,0,0,.46-.11l7.14-3.72a1,1,0,0,0,.54-.89A1,1,0,0,0,20.79,15.51Z"/>
-                      </g>
-                    </svg>
-                    <span class="sr-only">Youtube</span>
-                  </a>
-                  <a href="https://www.facebook.com/profile.php?id=100090907645206" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
-                    <?xml version="1.0" ?>
-                    <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="w-6 h-6">
-                      <path class="cls-1" d="M53.68,38.26v15.1H37.11V72H53.68v42H73.29V72H90l2-18.63H73.29V38.26c0-2.67,2.11-4,3-4.82,1.57-1.34,9.15-1.55,9.15-1.55h7.43V15a93.26,93.26,0,0,0-11.68-1C53.11,14,53.68,38.26,53.68,38.26Z"/>
-                    </svg>
-                    <span class="sr-only">Facebook</span>
-                  </a>
-                  <a href="https://www.linkedin.com/company/y-u-m-/" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
-                    <?xml version="1.0" ?><svg fill="currentColor" aria-hidden="true" class="w-6 h-6" enable-background="new 0 0 183.836 179.8984" id="linkedin" version="1.1" viewBox="0 0 183.836 179.8984" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M21.5663,0C9.0703,0,0,8.6172,0,20.488c0,11.8636,8.8907,20.4748,21.1367,20.4748c6.3516,0,11.8244-2.0584,15.828-5.9552   c3.84-3.738,5.9572-8.8944,5.9532-14.6132C42.6367,8.3868,33.8555,0,21.5663,0z M31.3867,29.2732   c-2.4804,2.4144-6.0272,3.6896-10.25,3.6896C13.4023,32.9628,8,27.834,8,20.488C8,13.0196,13.4531,8,21.5663,8   c7.9337,0,13.172,4.9392,13.3516,12.49C34.9179,23.9376,33.664,27.0564,31.3867,29.2732z"/><path d="M3.836,179.8984h35.9531V47.7208H3.836V179.8984z M11.836,55.7208h19.9531v116.1776H11.836V55.7208z"/><path d="M134.5939,47.7208c-16.672,0-26.8792,5.7536-32.7932,11.166l-1.1247-11.166H60v132.1776h39.836v-69.4708   c0-2.992,1.2107-9.2052,1.9727-10.8456c4.8124-10.3652,11.3044-10.3652,21.1364-10.3652c11.3244,0,20.8909,10.6192,20.8909,23.1876   v67.494h40v-74.6816C183.836,65.7128,158.3087,47.7208,134.5939,47.7208z M175.836,171.8984h-24v-59.494   c0-16.9064-13.2305-31.1876-28.8909-31.1876c-10.0468,0-21.4336,0-28.3944,14.998c-1.4376,3.0996-2.7147,10.5292-2.7147,14.2128   v61.4708H68V55.7208h25.4415l1.6328,16.1776h6.5544l1.172-1.8908c2.668-4.2948,11.1056-14.2868,31.7932-14.2868   c19.8632,0,41.2421,15.488,41.2421,49.496V171.8984z"/></g></svg>
-                    <span class="sr-only">LinkedIn</span>
-                  </a>
-                </div>
-              </div>
+            <div class="mt-8 lg:mt-0">
+               <div class="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
+                  <button class="px-6 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-2xl focus:ring focus:ring-blue-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-blue-700 focus:outline-none focus:bg-blue-500">
+                  Grow Your Brand
+                  </button>
+               </div>
+               <p class="mt-3 text-xs text-gray-400 dark:text-gray-400 text-center">FREE Technical Audit<br>(only 3 spots per month)</p>
             </div>
-          </div>
-        </div>
-        <hr class="my-6 border-gray-700 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-center">
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" class="hover:text-blue-400">YUM™</a>. All Rights Reserved.
-          </span>  
-        </div>
+         </div>
+      </section>
+      <section id="footer" class="bg-dark dark:bg-dark">
+         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-around items-center">
+               <div class="mb-6 md:mb-0 mr-32">
+                  <a href="/" class="flex items-center">
+                  <img src="assets/img/logo.png" class="mr-80 h-14" alt="Logo" />
+                  </a>
+                  <p class="text-gray-400 dark:text-gray-400 pt-2 pb-4 font-medium">
+                     Washington, DC 20053<br>United States
+                  </p>
+                  <a href="tel:+15713535154" class="text-gray-500 dark:text-gray-400 pb-3 flex">
+                     <?xml version="1.0" ?>
+                     <svg class="feather feather-phone-call mr-3 w-6 h-6" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                     </svg>
+                     (571)-353-5154
+                  </a>
+                  <a href="mailto:media@yumworldwide.com" class="text-gray-500 dark:text-gray-400 pb-3 flex icon">
+                     <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                     <svg enable-background="new 0 0 26 26" id="Слой_1" version="1.1" viewBox="0 0 26 26" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="h-6 w-6 mr-3" fill="currentColor">
+                        <path d="M23.2294922,4H2.7705078C1.7939453,4,1,4.84375,1,5.8808594v14.2382813  C1,21.15625,1.7939453,22,2.7705078,22h20.4589844C24.2060547,22,25,21.15625,25,20.1191406V5.8808594  C25,4.84375,24.2060547,4,23.2294922,4z M15.666687,13.0003052L23.5,7.3469849v11.3060913L15.666687,13.0003052z M23.2294922,5.5  c0.0535278,0,0.1077881,0.0323486,0.1549072,0.0806885L13,13.0751343L2.6156006,5.5806885  C2.6627197,5.5323486,2.71698,5.5,2.7705078,5.5H23.2294922z M2.5,18.6530151V7.3469849l7.8328247,5.6529541L2.5,18.6530151z   M2.7705078,20.5c-0.0535278,0-0.1077881-0.0324707-0.1549072-0.0807495l8.9987183-6.4944458l0.9472046,0.6835938  c0.0224609,0.0162964,0.0484619,0.0229492,0.0721436,0.036377c0.0231323,0.0131226,0.0447388,0.024231,0.0689697,0.03479  C12.798584,14.7214966,12.8981323,14.75,12.9990234,14.75c0.0003662,0,0.0006104-0.0002441,0.0009766-0.0002441  S13.0006104,14.75,13.0009766,14.75c0.1008911,0,0.2004395-0.0285034,0.2963867-0.0704346  c0.024231-0.0105591,0.0458374-0.0216675,0.0689697-0.03479c0.0236816-0.0134277,0.0496826-0.0200806,0.0721436-0.036377  l0.9467163-0.6832886l8.9992065,6.4942017C23.3372803,20.4675903,23.28302,20.5,23.2294922,20.5H2.7705078z"/>
+                     </svg>
+                     media@yumworldwide.com
+                  </a>
+               </div>
+               <div class="grid grid-cols gap-8 sm:gap-6 sm:grid-cols-3">
+                  <div>
+                     <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Useful Links</h2>
+                     <ul class="text-gray-400 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                           <a href="/" class="hover:text-blue-400">Home</a>
+                        </li>
+                        <li class="mb-4">
+                           <a href="index.html#faq" class="hover:text-blue-400">About Us</a>
+                        </li>
+                        <li class="mb-4">
+                           <a href="index.html#resources" class="hover:text-blue-400">Resources</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Legal</h2>
+                     <ul class="text-gray-400 dark:text-gray-400 font-medium">
+                        <li class="mb-4">
+                           <a href="privacy.html" class="hover:text-blue-400">Privacy Policy</a>
+                        </li>
+                        <li>
+                           <a href="tos.html" class="hover:text-blue-400">Terms of Service</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div>
+                     <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Follow Us</h2>
+                     <div class="text-gray-400 dark:text-gray-400 font-medium">
+                        <p>Get an exclusive free peek into our network and how we've built it.</p>
+                        <div class="flex mt-4 space-x-5 sm: sm:mt-0 pt-5">
+                           <a href="https://www.instagram.com/y.u.m/" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
+                              <?xml version="1.0" encoding="utf-8"?>
+                              <svg class="w-6 h-6" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 56.7 56.7" enable-background="new 0 0 56.7 56.7" xml:space="preserve" fill="currentColor" aria-hidden="true">
+                                 <g>
+                                    <path d="M28.2,16.7c-7,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8S41,36.5,41,29.5S35.2,16.7,28.2,16.7z M28.2,37.7
+                                       c-4.5,0-8.2-3.7-8.2-8.2s3.7-8.2,8.2-8.2s8.2,3.7,8.2,8.2S32.7,37.7,28.2,37.7z"/>
+                                    <circle cx="41.5" cy="16.4" r="2.9"/>
+                                    <path d="M49,8.9c-2.6-2.7-6.3-4.1-10.5-4.1H17.9c-8.7,0-14.5,5.8-14.5,14.5v20.5c0,4.3,1.4,8,4.2,10.7c2.7,2.6,6.3,3.9,10.4,3.9
+                                       h20.4c4.3,0,7.9-1.4,10.5-3.9c2.7-2.6,4.1-6.3,4.1-10.6V19.3C53,15.1,51.6,11.5,49,8.9z M48.6,39.9c0,3.1-1.1,5.6-2.9,7.3
+                                       s-4.3,2.6-7.3,2.6H18c-3,0-5.5-0.9-7.3-2.6C8.9,45.4,8,42.9,8,39.8V19.3c0-3,0.9-5.5,2.7-7.3c1.7-1.7,4.3-2.6,7.3-2.6h20.6
+                                       c3,0,5.5,0.9,7.3,2.7c1.7,1.8,2.7,4.3,2.7,7.2V39.9L48.6,39.9z"/>
+                                 </g>
+                              </svg>
+                              <span class="sr-only">Instagram</span>
+                           </a>
+                           <a href="https://www.tiktok.com/@youngunderratedmasses" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
+                              <?xml version="1.0" ?>
+                              <svg class="w-6 h-6" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+                                 <g id="Tiktok">
+                                    <path class="cls-1" d="M27.8,7.12A1,1,0,0,0,26.86,7,3.49,3.49,0,0,1,22,3.72,1,1,0,0,0,21.72,3,1,1,0,0,0,21,2.69H17a1,1,0,0,0-1,1V20.81a2.5,2.5,0,1,1-2.5-2.5,1,1,0,0,0,1-1v-4a1,1,0,0,0-1-1A8.51,8.51,0,0,0,5,20.81a8.41,8.41,0,0,0,1.6,5,1,1,0,0,0,.81.42A1,1,0,0,0,8,26a1,1,0,0,0,.23-1.4A6.44,6.44,0,0,1,7,20.81a6.52,6.52,0,0,1,5.5-6.43v2A4.5,4.5,0,1,0,18,20.81V4.69h2.07A5.51,5.51,0,0,0,25.5,9.31a6.3,6.3,0,0,0,.75-.05V11.2a7.12,7.12,0,0,1-4.74-.83,1,1,0,0,0-1,0,1,1,0,0,0-.5.87v9.57a6.51,6.51,0,0,1-9,6,1,1,0,0,0-.77,1.84,8.36,8.36,0,0,0,3.28.66A8.52,8.52,0,0,0,22,21.47a.76.76,0,0,0,0-.16V12.79a9.13,9.13,0,0,0,5.52.16,1,1,0,0,0,.72-1V8A1,1,0,0,0,27.8,7.12Z"/>
+                                 </g>
+                              </svg>
+                              <span class="sr-only">Tiktok</span>
+                           </a>
+                           <a href="https://www.youtube.com/@youngunderratedmasses" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
+                              <?xml version="1.0" ?>
+                              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="w-6 h-6">
+                                 <title/>
+                                 <g data-name="youtube youtuber video play" id="youtube_youtuber_video_play">
+                                    <path d="M30,12a5.71,5.71,0,0,0-5.31-5.7C18.92,6,13.06,6,7.33,6.28,4.51,6.28,2,9,2,12a43.69,43.69,0,0,0,0,8.72,5.32,5.32,0,0,0,5.28,5.33h0q4.35.24,8.72.24t8.67-.23A5.34,5.34,0,0,0,30,20.8,31.67,31.67,0,0,0,30,12Zm-2,8.63a.49.49,0,0,0,0,.12,3.36,3.36,0,0,1-3.39,3.34,166,166,0,0,1-17.28,0A3.36,3.36,0,0,1,4,20.65a42,42,0,0,1,0-8.47.45.45,0,0,0,0-.11A3.78,3.78,0,0,1,7.38,8.28c2.86-.13,5.74-.19,8.62-.19s5.76.06,8.62.19h.05c1.71,0,3.33,1.84,3.33,3.79a.76.76,0,0,0,0,.15A30.11,30.11,0,0,1,28,20.61Z"/>
+                                    <path d="M20.79,15.51l-7.14-3.68a1,1,0,1,0-.92,1.78l5.43,2.79-4,2.07V16.4a1,1,0,0,0-2,0v3.72a1,1,0,0,0,1,1,1,1,0,0,0,.46-.11l7.14-3.72a1,1,0,0,0,.54-.89A1,1,0,0,0,20.79,15.51Z"/>
+                                 </g>
+                              </svg>
+                              <span class="sr-only">Youtube</span>
+                           </a>
+                           <a href="https://www.facebook.com/profile.php?id=100090907645206" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
+                              <?xml version="1.0" ?>
+                              <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="w-6 h-6">
+                                 <path class="cls-1" d="M53.68,38.26v15.1H37.11V72H53.68v42H73.29V72H90l2-18.63H73.29V38.26c0-2.67,2.11-4,3-4.82,1.57-1.34,9.15-1.55,9.15-1.55h7.43V15a93.26,93.26,0,0,0-11.68-1C53.11,14,53.68,38.26,53.68,38.26Z"/>
+                              </svg>
+                              <span class="sr-only">Facebook</span>
+                           </a>
+                           <a href="https://www.linkedin.com/company/y-u-m-/" class="text-gray-500 hover:text-blue-400 dark:hover:text-white">
+                              <?xml version="1.0" ?>
+                              <svg fill="currentColor" aria-hidden="true" class="w-6 h-6" enable-background="new 0 0 183.836 179.8984" id="linkedin" version="1.1" viewBox="0 0 183.836 179.8984" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                 <g>
+                                    <path d="M21.5663,0C9.0703,0,0,8.6172,0,20.488c0,11.8636,8.8907,20.4748,21.1367,20.4748c6.3516,0,11.8244-2.0584,15.828-5.9552   c3.84-3.738,5.9572-8.8944,5.9532-14.6132C42.6367,8.3868,33.8555,0,21.5663,0z M31.3867,29.2732   c-2.4804,2.4144-6.0272,3.6896-10.25,3.6896C13.4023,32.9628,8,27.834,8,20.488C8,13.0196,13.4531,8,21.5663,8   c7.9337,0,13.172,4.9392,13.3516,12.49C34.9179,23.9376,33.664,27.0564,31.3867,29.2732z"/>
+                                    <path d="M3.836,179.8984h35.9531V47.7208H3.836V179.8984z M11.836,55.7208h19.9531v116.1776H11.836V55.7208z"/>
+                                    <path d="M134.5939,47.7208c-16.672,0-26.8792,5.7536-32.7932,11.166l-1.1247-11.166H60v132.1776h39.836v-69.4708   c0-2.992,1.2107-9.2052,1.9727-10.8456c4.8124-10.3652,11.3044-10.3652,21.1364-10.3652c11.3244,0,20.8909,10.6192,20.8909,23.1876   v67.494h40v-74.6816C183.836,65.7128,158.3087,47.7208,134.5939,47.7208z M175.836,171.8984h-24v-59.494   c0-16.9064-13.2305-31.1876-28.8909-31.1876c-10.0468,0-21.4336,0-28.3944,14.998c-1.4376,3.0996-2.7147,10.5292-2.7147,14.2128   v61.4708H68V55.7208h25.4415l1.6328,16.1776h6.5544l1.172-1.8908c2.668-4.2948,11.1056-14.2868,31.7932-14.2868   c19.8632,0,41.2421,15.488,41.2421,49.496V171.8984z"/>
+                                 </g>
+                              </svg>
+                              <span class="sr-only">LinkedIn</span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <hr class="my-6 border-gray-700 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-center">
+               <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" class="hover:text-blue-400">YUM™</a>. All Rights Reserved.
+               </span>  
+            </div>
+         </div>
+      </section>
+      <div id="gbbtn" class="fixed hidden inset-x-0 lg:inset-x-auto bottom-6 lg:right-5 xl:right-10 xl:bottom-8 z-40">
+         <div class="lg:w-72 px-6 lg:px-0">
+            <div class="p-2 bg-blue-600 rounded-2xl shadow-lg sm:p-3 transition duration-150 ease-in-out hover:bg-sec hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sec active:shadow-lg">
+               <div class="flex flex-wrap items-center justify-between">
+                  <a target="_blank" href="" class="flex items-center flex-1 w-0">
+                     <span class="flex">
+                        <?xml version="1.0" ?>
+                        <svg fill="currentColor" aria-hidden="true" class="w-6 h-6 text-gray-50" data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M16,30a1,1,0,0,1,0-2,12,12,0,0,0,6.43-1.86,1,1,0,1,1,1.07,1.68A13.9,13.9,0,0,1,16,30Z"/>
+                           <path d="M27,23.93a1,1,0,0,1-.85-1.53A12,12,0,0,0,28,16a1,1,0,0,1,2,0,14,14,0,0,1-2.15,7.46A1,1,0,0,1,27,23.93Z"/>
+                           <path d="M16,30A14,14,0,1,1,30,16a1,1,0,0,1-2,0A12,12,0,1,0,16,28a1,1,0,0,1,0,2Z"/>
+                           <path d="M29,30a1.25,1.25,0,0,1-.32-.05l-6-2a1,1,0,1,1,.64-1.9l6,2A1,1,0,0,1,30,29.32,1,1,0,0,1,29,30Z"/>
+                           <path d="M29,30a1,1,0,0,1-.95-.68l-2-6a1,1,0,0,1,1.9-.64l2,6A1,1,0,0,1,29.32,30,1.25,1.25,0,0,1,29,30Z"/>
+                           <path d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Z"/>
+                           <path d="M23,18a2,2,0,1,1,2-2A2,2,0,0,1,23,18Zm0-2h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Z"/>
+                           <path d="M9,18a2,2,0,1,1,2-2A2,2,0,0,1,9,18Zm0-2H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Z"/>
+                        </svg>
+                     </span>
+                     <p class="ml-3 font-medium tracking-wide text-center text-white truncate">
+                        Grow your brand with us!
+                     </p>
+                  </a>
+               </div>
+            </div>
+         </div>
       </div>
-    </section>
-    <div id="gbbtn" class="fixed hidden inset-x-0 lg:inset-x-auto bottom-6 lg:right-5 xl:right-10 xl:bottom-8 z-40">
-      <div class="lg:w-72 px-6 lg:px-0">
-        <div class="p-2 bg-blue-600 rounded-2xl shadow-lg sm:p-3 transition duration-150 ease-in-out hover:bg-sec hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sec active:shadow-lg">
-          <div class="flex flex-wrap items-center justify-between">
-            <a target="_blank" href="" class="flex items-center flex-1 w-0">
-              <span class="flex">
-                <?xml version="1.0" ?><svg fill="currentColor" aria-hidden="true" class="w-6 h-6 text-gray-50" data-name="Layer 1" id="Layer_1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16,30a1,1,0,0,1,0-2,12,12,0,0,0,6.43-1.86,1,1,0,1,1,1.07,1.68A13.9,13.9,0,0,1,16,30Z"/><path d="M27,23.93a1,1,0,0,1-.85-1.53A12,12,0,0,0,28,16a1,1,0,0,1,2,0,14,14,0,0,1-2.15,7.46A1,1,0,0,1,27,23.93Z"/><path d="M16,30A14,14,0,1,1,30,16a1,1,0,0,1-2,0A12,12,0,1,0,16,28a1,1,0,0,1,0,2Z"/><path d="M29,30a1.25,1.25,0,0,1-.32-.05l-6-2a1,1,0,1,1,.64-1.9l6,2A1,1,0,0,1,30,29.32,1,1,0,0,1,29,30Z"/><path d="M29,30a1,1,0,0,1-.95-.68l-2-6a1,1,0,0,1,1.9-.64l2,6A1,1,0,0,1,29.32,30,1.25,1.25,0,0,1,29,30Z"/><path d="M16,18a2,2,0,1,1,2-2A2,2,0,0,1,16,18Zm0-2h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Z"/><path d="M23,18a2,2,0,1,1,2-2A2,2,0,0,1,23,18Zm0-2h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Zm0,0h0Z"/><path d="M9,18a2,2,0,1,1,2-2A2,2,0,0,1,9,18Zm0-2H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Zm0,0H9Z"/></svg>
-              </span>
-              <p class="ml-3 font-medium tracking-wide text-center text-white truncate">
-                Grow your brand with us!
-              </p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Back to top button -->
-    <button
-      type="button"
-      data-te-ripple-init
-      data-te-ripple-color="light"
-      class="!fixed bottom-24 right-5 hidden rounded-full bg-blue-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-sec hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sec active:shadow-lg z-40"
-      id="btn-back-to-top">
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fas"
-        class="h-4 w-4"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512">
-        <path
-          fill="currentColor"
-          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
-      </svg>
-    </button>
-    <!-- Modal -->
-        <div class="flex items-center justify-center w-full flex-col bg-gray-100">
-          <div role="dialog"
+      <!-- Back to top button -->
+      <button
+         type="button"
+         data-te-ripple-init
+         data-te-ripple-color="light"
+         class="!fixed bottom-24 right-5 hidden rounded-full bg-blue-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-sec hover:shadow-lg focus:bg-blue-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sec active:shadow-lg z-40"
+         id="btn-back-to-top">
+         <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            class="h-4 w-4"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512">
+            <path
+               fill="currentColor"
+               d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path>
+         </svg>
+      </button>
+      <!-- Modal -->
+      <div class="flex items-center justify-center w-full flex-col bg-gray-100">
+         <div role="dialog"
             id="modal-example"
             aria-hidden="true"
             style="display: none"
             class="modal fixed top-0 left-0 z-50 w-screen h-screen bg-black/30 flex items-center flex-col justify-center fade"
             tabindex="-1"
             data-toggle="modal">
-          <div
-            class="absolute top-0 left-0 z-[0] w-full h-full"
-            tabindex="-1"
-          >
-          </div>
-          <article
-            class="imgbg modal-content flex flex-col relative m-0 rounded-md bg-white sm:my-16 lg:h-[22rem] h-[41.5rem] lg:w-1/2 w-[80%]"
-            aria-labelledby="modal- title"
-            aria-describedby="modal-body"
-          >
-          <header class="flex p-4 items-center justify-end">
-            <button
-              type="button"
-              class="flex items-center justify-center w-8 h-8 rounded-full bg-transparent transition-colors duration-300 hover:bg-black/10"
-              data-dismiss="modal"
-              aria-label="Close"
-              >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                style="--size: 32rem"
-              >
-                <line x1="18" y1="6" x2="6" y2="18" style="--size: 32rem"></line>
-                <line x1="6" y1="6" x2="18" y2="18" style="--size: 32rem"></line>
-              </svg>
-            </button>
-          </header>
-          <main class="relative flex p-6" style="--size: 32rem">
-            <div class="lg:w-1/2 lg:mr-[5rem]"></div>
-            <div class="lg:w-1/2 text-center lg:pr-4 lg:pt-2 pt-[14rem] lg:mt-[-2rem]">
-            <p class="text-sm font-bold uppercase tracking-widest">
-              For a Limited Time 
-            </p>
-            <p class="mt-6 text-[14px] leading-6 font-semibold uppercase">
-             Get FREE access to our <span>($1600+)</span> business community, including over 50+ video courses, frameworks, and support from eight-figure mentors to achieve <span id="start-number"></span> organic reach monthly in just 90 days.
-            </p>
-            <a
-              class="mt-8 inline-block rounded-[5rem] w-full bg-blue-600 hover:bg-blue-700 py-4 text-sm font-semibold uppercase tracking-widest text-white"
-              href="https://discord.gg/SrbhPH8dAE"
-            >
-              Yes I want in
-            </a>
+            <div
+               class="absolute top-0 left-0 z-[0] w-full h-full"
+               tabindex="-1"
+               >
             </div>
-          </main>
-          </article>
-          </div>
-       </div>
-    <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  </body>
+            <article
+               class="imgbg modal-content flex flex-col relative m-0 rounded-md bg-white sm:my-16 lg:h-[22rem] h-[41.5rem] lg:w-1/2 w-[80%]"
+               aria-labelledby="modal- title"
+               aria-describedby="modal-body"
+               >
+               <header class="flex p-4 items-center justify-end">
+                  <button
+                     type="button"
+                     class="flex items-center justify-center w-8 h-8 rounded-full bg-transparent transition-colors duration-300 hover:bg-black/10"
+                     data-dismiss="modal"
+                     aria-label="Close"
+                     >
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#000000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        style="--size: 32rem"
+                        >
+                        <line x1="18" y1="6" x2="6" y2="18" style="--size: 32rem"></line>
+                        <line x1="6" y1="6" x2="18" y2="18" style="--size: 32rem"></line>
+                     </svg>
+                  </button>
+               </header>
+               <main class="relative flex p-6" style="--size: 32rem">
+                  <div class="lg:w-1/2 lg:mr-[5rem]"></div>
+                  <div class="lg:w-1/2 text-center lg:pr-4 lg:pt-2 pt-[14rem] lg:mt-[-2rem]">
+                     <p class="text-sm font-bold uppercase tracking-widest">
+                        For a Limited Time 
+                     </p>
+                     <p class="mt-6 text-[14px] leading-6 font-semibold uppercase">
+                        Get FREE access to our <span>($1600+)</span> business community, including over 50+ video courses, frameworks, and support from eight-figure mentors to achieve <span id="start-number"></span> organic reach monthly in just 90 days.
+                     </p>
+                     <a
+                        class="mt-8 inline-block rounded-[5rem] w-full bg-blue-600 hover:bg-blue-700 py-4 text-sm font-semibold uppercase tracking-widest text-white"
+                        href="https://discord.gg/SrbhPH8dAE"
+                        >
+                     Yes I want in
+                     </a>
+                  </div>
+               </main>
+            </article>
+         </div>
+      </div>
+      <script src="assets/js/main.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   </body>
 </html>

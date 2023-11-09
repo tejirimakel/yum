@@ -24,3 +24,11 @@
    background-repeat: no-repeat;
    height: auto;
 }
+
+.bimg {
+   background-image: url("../img/logo2.png");
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: auto;
+   background-position: center;
+}

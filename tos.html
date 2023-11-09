@@ -43,76 +43,79 @@
   </head>
   <body>
     <section id="navi" class="bg-white dark:bg-gray-800">
-      <nav class="container p-6 lg:px-[4rem] xl:px-[7rem] mx-auto lg:flex lg:justify-between lg:items-center">
-        <div class="flex items-center justify-between">
-          <a href="/">
-            <img class="w-14 h-14" src="assets/img/logo.png" alt="logo"/>
-          </a>
-
-          <!-- Mobile menu button -->
-          <div class="flex lg:hidden">
-            <button id="menu-btn" type="button"
-              class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
-              aria-label="toggle menu">
-              <span class="sr-only">Open main menu</span>
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path fill-rule="evenodd"
-                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-                </path>
-              </svg>
-            </button>
-            <button id="close-btn" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
-              <span class="sr-only">Close menu</span>
-              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="hidden lg:flex flex-col mt-4 space-y-2 lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0 ">
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#faq">About</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#resources">Resources</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="team.html">Team</a>
-          <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
-            href="index.html#port">Portfolio</a>
-        </div>
-        <div class="lg:-ml-[6rem] text-center lg:my-auto -mt-[2.5rem]">
-            <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm rounded-2xl">
-            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button></div>
-          <a class="hidden lg:flex block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
-            href="#">
-          Grow your Brand
-          </a>
-      </nav>
-      <div id="mobile-menu" class="hidden z-50" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10 text-center">
-                <div class="space-y-2 py-6">
-                  <a href="index.html#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">About</a>
-                  <a href="index.html#resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Resources</a>
-                  <a href="team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Team</a>
-                  <a href="index.html#port" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Portfolio</a>
-                </div>
-                <div class="py-2 px-10">
-                  <a class="block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 tracking-wide capitalize transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
-                    href="#">
-                  Grow your Brand
-                  </a>
-                </div>
-              </div>
+         <nav class="container p-6 lg:px-[3rem] 2xl:px-[10rem] mx-auto lg:flex lg:justify-between lg:items-center">
+            <div class="flex items-center justify-between">
+               <a href="/">
+               <img class="w-14 h-14" src="assets/img/logo.png" alt="logo"/>
+               </a>
+               <!-- Mobile menu button -->
+               <div class="flex lg:hidden">
+                  <button id="menu-btn" type="button"
+                     class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+                     aria-label="toggle menu">
+                     <span class="sr-only">Open main menu</span>
+                     <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                        <path fill-rule="evenodd"
+                           d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                        </path>
+                     </svg>
+                  </button>
+                  <button id="close-btn" type="button" class=" text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600">
+                     <span class="sr-only">Close menu</span>
+                     <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                  </button>
+               </div>
             </div>
-      </div>
-    </section>
+            <div class="hidden lg:flex flex-col mt-4 space-y-2 lg:-mx-6 lg:mt-0 lg:flex-row lg:space-y-0 justify-center items-center space-x-4">
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#faq">About</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#resources">Resources</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="team.html">Team</a>
+               <a class="text-gray-700 dark:text-gray-200 lg:px-6 dark:hover:text-blue-400 hover:text-lblue"
+                  href="#port">Portfolio</a>
+            </div>
+            <div class="lg:-ml-[9.5rem] text-center 2xl:-ml-[12rem] lg:my-auto -mt-[2.5rem]">
+               <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 text-sm rounded-2xl">
+                  <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                  </svg>
+                  <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                  </svg>
+               </button>
+            </div>
+            <a class="hidden lg:flex block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto"
+               href="#">
+            Grow your Brand
+            </a>
+         </nav>
+         <div id="mobile-menu" class="hidden z-50 transform-translate-x-full" role="dialog" aria-modal="true">
+            <!-- Background backdrop, show/hide based on slide-over state. -->
+            <div class="mt-6">
+               <div class="-my-6 divide-y divide-gray-500/10 text-center">
+                  <div class="space-y-2 py-6">
+                     <a href="#faq" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">About</a>
+                     <a href="#resources" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Resources</a>
+                     <a href="team.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Team</a>
+                     <a href="#port" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-gray-200 hover:text-gray-900">Portfolio</a>
+                  </div>
+                  <div class="py-2 px-10">
+                     <a class="block h-10 px-5 py-2 mt-4 text-sm text-center text-gray-100 tracking-wide capitalize transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto" href="#">
+                     Grow your Brand
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
     <section class="bg-white dark:bg-gray-800">
-      <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Our <span class="text-blue-600">Terms of Service</span></h1>
-        <p class="">1. **Introduction**
+      <div class="container px-6 py-10 px-6 lg:py-20  2xl:px-[7rem] 2xl:pb-[7rem] mx-auto">
+            <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-[38px] py-4 dark:text-white">Our <span class="text-blue-600">Terms of Service</span></h1>
+      <h1 class="text-lg font-bold dark:text-blue-600">1. **Introduction**</h1>
    - Welcome to Y.U.M Media. This document outlines the Terms of Service ("Terms") that govern your use of our website and services. By accessing Y.U.M Media, you agree to these Terms, which form a binding legal agreement between you and Y.U.M Media.
 
 2. **Acceptance of Terms**
