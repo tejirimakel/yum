@@ -42,26 +42,63 @@ document.addEventListener('DOMContentLoaded', function ()
     window.addEventListener("scroll", scrollFunction2);
 
     
+
+
     const mobileMenu = document.getElementById("mobile-menu");
-            const menuBtn = document.getElementById("menu-btn");
-            const closeBtn = document.getElementById("close-btn");
-            const menuIcon = menuBtn.querySelector('svg');
-            const closeIcon = closeBtn.querySelector('svg');
+const menuBtn = document.getElementById("menu-btn");
+const closeBtn = document.getElementById("close-btn");
+const menuIcon = menuBtn.querySelector('svg');
+const closeIcon = closeBtn.querySelector('svg');
 
-            menuBtn.addEventListener("click", function() {
-                mobileMenu.classList.toggle("hidden");
-                mobileMenu.classList.add("animate__animated", "animate__fadeInDown", "animate__slow");
-                menuIcon.style.display = 'none';
-  closeIcon.style.display = 'block';
-            });
+let isMenuOpen = false; // Track the menu state
 
-            closeBtn.addEventListener("click", function() {
-                mobileMenu.classList.toggle("hidden");
-                closeIcon.style.display = 'none';
-  menuIcon.style.display = 'block';
-            });
+menuBtn.addEventListener("click", function() {
+    if (isMenuOpen) {
+        // Close the menu
+        closeMenu();
+    } else {
+        // Open the menu
+        openMenu();
+    }
+});
 
-    
+closeBtn.addEventListener("click", function() {
+    // Close the menu when the close button is clicked
+    if (isMenuOpen) {
+        closeMenu();
+    }
+});
+
+function openMenu() {
+    // Ensure the menu is not hidden
+    mobileMenu.classList.remove("hidden");
+
+    // Add animation classes to open the menu
+    mobileMenu.classList.remove("animate__fadeOutUp");
+    mobileMenu.classList.add("animate__animated", "animate__fadeInDown", "animate__slow");
+    menuIcon.style.display = 'none';
+    closeIcon.style.display = 'block';
+
+    // Menu is now open
+    isMenuOpen = true;
+}
+
+function closeMenu() {
+    // Add animation classes to close the menu
+    mobileMenu.classList.remove("animate__animated", "animate__fadeInDown", "animate__slow");
+    mobileMenu.classList.add("animate__animated", "animate__fadeOutUp", "animate__slow");
+    closeIcon.style.display = 'none';
+    menuIcon.style.display = 'block';
+
+    // Add a delay to hide the menu after the animation finishes
+    setTimeout(() => {
+        mobileMenu.classList.toggle("hidden");
+    }, 1000); // Adjust the delay based on your animation duration
+
+    // Menu is now closed
+    isMenuOpen = false;
+}
+
 
 
   // Accordion
@@ -133,6 +170,35 @@ document.addEventListener('DOMContentLoaded', function ()
     });    
 
 
+var num; // Declare the interval variable.
+var upto = 0;
+var speed = 100; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
+var countingElement = document.getElementById("start-number");
+
+function updated() {
+    countingElement.innerHTML = ++upto + "+";
+    
+    if (upto === 10000000) {
+        clearInterval(num);
+    }
+}
+
+function setSpeed(newSpeed) {
+    speed = newSpeed;
+    
+    // If the interval is already running, clear it and start a new one with the updated speed.
+    if (num) {
+        clearInterval(num);
+        num = setInterval(updated, speed);
+    }
+}
+
+// Start the initial interval
+num = setInterval(updated, speed);
+
+
+
+
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 
@@ -174,40 +240,17 @@ document.addEventListener('DOMContentLoaded', function ()
         
     });
 
-    let num; // Declare the interval variable.
-let upto = 0;
-let speed = 5; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
-
-function updated() {
-    let count = document.getElementById("start-number");
-    count.innerHTML = ++upto + "+";
-    
-    if (upto === 10000000) {
-        clearInterval(num);
-    }
-}
-
-function setSpeed(newSpeed) {
-    speed = newSpeed;
-    
-    // If the interval is already running, clear it and start a new one with the updated speed.
-    if (num) {
-        clearInterval(num);
-        num = setInterval(updated, speed);
-    }
-}
-
-
-
-        function startCounter(id, startValue, endValue, speed) {
+ 
+    function startCounter(id, startValue, endValue, speed) {
   let count = startValue;
   const element = document.getElementById(id);
   const interval = setInterval(() => {
     element.textContent = count + '+';
     if (count === endValue) {
       clearInterval(interval);
+    } else {
+      count++;
     }
-    count++;
   }, speed);
 }
 
@@ -237,8 +280,6 @@ checkCounterSection();
 
 
 
-// Start the interval with the initial speed.
-num = setInterval(updated, speed);
 
   
 const section = document.getElementById("resources");
