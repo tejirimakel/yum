@@ -124,24 +124,7 @@ function closeMenu() {
     });
   });
 
-  // Slider
-  const swiper = new Swiper(".nswiper",
-  {
-    grabCursor: true,
-    spaceBetween: 10,
-    loop: true,
-    parallax: true,
-    pagination:
-    {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-      clickable: true,
-    },
-    autoplay:
-    {
-      delay: 5000,
-    },
-  });
+  
      
 
      
@@ -322,6 +305,26 @@ const section = document.getElementById("resources");
       // Add the animation class to the faq section
       faqSection.classList.add("animate__animated", "animate__slideInUp", "animate__slow");
     }
+  });
+
+
+  // Slider
+  const swiper = new Swiper(".nswiper",
+  {
+    grabCursor: true,
+    spaceBetween: 10,
+    loop: true,
+    parallax: true,
+    pagination:
+    {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+    autoplay:
+    {
+      delay: 5000,
+    },
   });
 
 });
