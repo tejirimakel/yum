@@ -24,27 +24,30 @@ document.addEventListener('DOMContentLoaded', function ()
     window.addEventListener("scroll", scrollFunction1);
 
 function showModal() {
-        $('#modal-example').fadeIn();
+    $('#modal-example').fadeIn();
+}
+
+// Delay showing the modal by 5 seconds
+$(document).ready(function () {
+    setTimeout(showModal, 5000); // 5000 milliseconds (5 seconds)
+});
+
+// Function to hide the modal with a fade-out effect
+function hideModal() {
+    $('#modal-example').fadeOut();
+}
+
+$('#modal-example button[data-dismiss="modal"]').on('click', hideModal);
+
+$(document).on('keydown', function (e) {
+    if (e.keyCode === 27) { // Check if the key code is 27 (Esc key)
+        hideModal();
     }
+});
 
-    // Delay showing the modal by 5 seconds
-    $(document).ready(function () {
-        setTimeout(showModal, 5000); // 5000 milliseconds (5 seconds)
-    });
+$('#open-modal-button').on('click', showModal);
+$('#open-modal-button2').on('click', showModal);
 
-    // Function to hide the modal with a fade-out effect
-    function hideModal() {
-        $('#modal-example').fadeOut();
-    }
-
-    $('#modal-example button[data-dismiss="modal"]').on('click', hideModal);
-
-
-    $(document).on('keydown', function (e) {
-        if (e.keyCode === 27) { // Check if the key code is 27 (Esc key)
-            hideModal();
-        }
-    });
 
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');

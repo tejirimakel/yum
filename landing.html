@@ -57,7 +57,7 @@
                      <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100-2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464a1 1 0 106.465 1.414l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zm4 0a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
                   </svg>
                </button>
-               <a class="h-10 px-5 py-2 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto" href="#">
+               <a id="open-modal-button" class="h-10 px-5 py-2 text-sm text-center text-gray-100 capitalize tracking-wide transition-colors duration-200 transform bg-primary rounded-3xl dark:hover:bg-blue-600 dark:text-white lg:mt-0 hover:bg-blue-600 lg:w-auto" href="#" data-modal-target="modal-example" data-modal-toggle="modal-example">
                   Free Training Video
                </a>
             </div>
@@ -66,7 +66,7 @@
       <section id="team" class="bg-white dark:bg-gray-800">
          <div class="container px-4 py-10 mx-auto">
             <p class="font-semibold text-center text-gray-800 capitalize lg:text-2xl dark:text-gray-300">New training video reveals</p>
-            <h1 class="px-14 lg:px-48 2xl:px-60 text-2xl font-bold lg:text-4xl mx-auto my-2 text-center text-gray-800 dark:text-blue-600">
+            <h1 class="px-14 lg:px-48 2xl:px-60 text-2xl font-bold lg:text-4xl mx-auto my-2 text-center text-gray-800 dark:text-primary">
                Create A +$7,000/Month Income Through One Skill Using Our Proven Strategy
             </h1>
             <div class="container flex flex-col items-center justify-center px-6 py-3 mx-auto space-y-6 lg:h-[32rem] lg:py-5 2xl:py-5 lg:flex-row lg:items-center">
@@ -85,14 +85,14 @@
                   </ul>
                </div>
                <div class="w-full py-4 px-[1rem] lg:pr-[4rem] lg:pl-[2rem] 2xl:pr-[4rem] 2xl:pl-[2rem] animate__animated animate__slideInUp animate__delay-3s animate__slow">
-                  <a  class="text-center inline-block rounded-[5rem] w-full bg-primary hover:bg-blue-600 dark:hover:bg-blue-600 py-3 text-[18px] font-semibold tracking-wide text-white"
-                     href="#">
+                  <a id="open-modal-button2" class="text-center inline-block rounded-[5rem] w-full bg-primary hover:bg-blue-600 dark:hover:bg-blue-600 py-3 text-[18px] font-semibold tracking-wide text-white"
+                     href="#" data-modal-target="modal-example" data-modal-toggle="modal-example">
                   Watch The Free Video
                   </a>
                </div>
             </div>
             <div class="flex items-center justify-center w-full lg:h-96 lg:w-1/2 heroimg animate__animated animate__slideInRight animate__delay-2s animate__slow">
-               <img class="object-contain w-full h-full mx-auto lg:max-w-2xl" src="assets/img/heroimg.png" alt="1"/>
+               <div class="bg-primary py-10 px-10 lg:py-[10rem] lg:px-[20rem] mb-8">Video Content Here</div>
             </div>
          </div>
          </div>
@@ -198,7 +198,7 @@
                             <div class="flex items-center h-5">
                                 <input id="remember" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-600 dark:border-gray-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required>
                             </div>
-                            <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to terms & conditions provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
+                            <label for="agree" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree to terms & conditions provided by the company. By providing my phone number, I agree to receive text messages from the business.</label>
                         </div>
                     </div>
                     
