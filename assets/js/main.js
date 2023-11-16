@@ -259,7 +259,7 @@ function checkCounterSection() {
   if (isVisible && !countersStarted) {
     startCounter('counter1', 0, 100, 10); // Speed in milliseconds (e.g., 100ms for faster counting).
     startCounter('counter2', 9999800, 10000000, 1 * sm);
-    startCounter('counter3', 0, 16, 100);
+    startCounter('counter3', 0, 16, 50);
     countersStarted = true;
   }
 }
