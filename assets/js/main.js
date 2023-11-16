@@ -257,9 +257,9 @@ function checkCounterSection() {
   const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
 
   if (isVisible && !countersStarted) {
-    startCounter('counter1', 0, 100, 50); // Speed in milliseconds (e.g., 100ms for faster counting).
-    startCounter('counter2', 9998000, 10000000, 1 * sm);
-    startCounter('counter3', 0, 16, 200);
+    startCounter('counter1', 0, 100, 10); // Speed in milliseconds (e.g., 100ms for faster counting).
+    startCounter('counter2', 9999800, 10000000, 1 * sm);
+    startCounter('counter3', 0, 16, 100);
     countersStarted = true;
   }
 }
