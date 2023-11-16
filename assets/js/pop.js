@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function ()
 
     const scrollFunction1 = () => {
       if (
-        document.body.scrollTop > 1600 ||
-        document.documentElement.scrollTop > 1600
+        document.body.scrollTop > 1000 ||
+        document.documentElement.scrollTop > 1000
       ) {
         mybutton.classList.remove("hidden");
       } else {
@@ -29,7 +29,7 @@ function showModal() {
 
 // Delay showing the modal by 5 seconds
 $(document).ready(function () {
-    setTimeout(showModal, 5000); // 5000 milliseconds (5 seconds)
+    setTimeout(showModal, 20000); // 5000 milliseconds (5 seconds)
 });
 
 // Function to hide the modal with a fade-out effect
@@ -47,50 +47,6 @@ $(document).on('keydown', function (e) {
 
 $('#open-modal-button').on('click', showModal);
 $('#open-modal-button2').on('click', showModal);
-
-
-    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
-
-    
-    // Change the icons inside the button based on previous settings
-    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        themeToggleLightIcon.classList.remove('hidden');
-    } else {
-        themeToggleDarkIcon.classList.remove('hidden');
-    }
-
-    var themeToggleBtn = document.getElementById('theme-toggle');
-
-    themeToggleBtn.addEventListener('click', function() {
-
-        // toggle icons inside button
-        themeToggleDarkIcon.classList.toggle('hidden');
-        themeToggleLightIcon.classList.toggle('hidden');
-
-        // if set via local storage previously
-        if (localStorage.getItem('color-theme')) {
-            if (localStorage.getItem('color-theme') === 'light') {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            }
-
-        // if NOT set via local storage previously
-        } else {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }
-        }
-        
-    });
-
 
 
 });        

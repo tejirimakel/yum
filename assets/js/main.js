@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function ()
 
     const scrollFunction1 = () => {
       if (
-        document.body.scrollTop > 1600 ||
-        document.documentElement.scrollTop > 1600
+        document.body.scrollTop > 1000 ||
+        document.documentElement.scrollTop > 1000
       ) {
         mybutton.classList.remove("hidden");
       } else {
@@ -135,7 +135,7 @@ function closeMenu() {
 
     // Delay showing the modal by 5 seconds
     $(document).ready(function () {
-        setTimeout(showModal, 5000); // 5000 milliseconds (5 seconds)
+        setTimeout(showModal, 10000); // 5000 milliseconds (5 seconds)
     });
 
     // Function to hide the modal with a fade-out effect
@@ -154,8 +154,9 @@ function closeMenu() {
 
 
 var num; // Declare the interval variable.
-var upto = 0;
-var speed = 100; // Set the initial speed in milliseconds (e.g., 100ms for faster counting).
+var upto = 9998000;
+var baseSpeed = 1; // Set the initial base speed in milliseconds (e.g., 100ms for faster counting).
+var speedFactor = 0.00001; // Adjust this factor to control the speed (1.0 for normal speed, 0.1 for 10 times faster).
 var countingElement = document.getElementById("start-number");
 
 function updated() {
@@ -166,18 +167,23 @@ function updated() {
     }
 }
 
-function setSpeed(newSpeed) {
-    speed = newSpeed;
+function setSpeed() {
+    var newSpeed = baseSpeed * speedFactor;
     
     // If the interval is already running, clear it and start a new one with the updated speed.
     if (num) {
         clearInterval(num);
-        num = setInterval(updated, speed);
+        num = setInterval(updated, newSpeed);
     }
 }
 
-// Start the initial interval
-num = setInterval(updated, speed);
+// Delay the start by 10 seconds
+setTimeout(function() {
+    // Start the initial interval
+    num = setInterval(updated, baseSpeed);
+    setSpeed();
+}, 10000); // 10000 milliseconds = 10 seconds
+
 
 
 
@@ -244,6 +250,7 @@ const counter2 = document.getElementById('counter2');
 const counter3 = document.getElementById('counter3');
 
 let countersStarted = false;
+const sm = 0.00001;
 
 function checkCounterSection() {
   const rect = counterSection.getBoundingClientRect();
@@ -251,7 +258,7 @@ function checkCounterSection() {
 
   if (isVisible && !countersStarted) {
     startCounter('counter1', 0, 100, 50); // Speed in milliseconds (e.g., 100ms for faster counting).
-    startCounter('counter2', 97999999, 100000000, 5);
+    startCounter('counter2', 9998000, 10000000, 1 * sm);
     startCounter('counter3', 0, 16, 200);
     countersStarted = true;
   }
